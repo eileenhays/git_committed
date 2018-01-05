@@ -14,7 +14,13 @@ def set_commitment(request, user_id, count_frequency, period):
 	return HttpResponse(response % (count_frequency, period))
 
 
-def progress(request, user_id):
-	response = "Progress was made"
+# def progress(request, user_id):
+#     latest_stats = Summary.objects.where('user_id'=user_id) #search by user_id
+#     context = {
+#         'latest_stats': latest_stats,
+#     }
+#     return render(request, 'app/index.html', context) #passes context to template
 
-	return HttpResponse(response)
+# def detail(request, question_id):
+#     question = get_object_or_404(Question, pk=question_id) # or get_list_or_404()
+#     return render(request, 'polls/detail.html', {'question': question})

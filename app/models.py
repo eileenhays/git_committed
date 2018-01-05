@@ -19,8 +19,8 @@ class Commitment(models.Model):
 
 	def __str__(self):
 		return '%s per %s' %(self.count_frequency,
-										   self.period
-										   )
+							 self.period
+							 )
 
 
 # class GitSummary(models.Model):
