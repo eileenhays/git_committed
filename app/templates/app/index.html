@@ -1,44 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>GitCommited Homepage</title>
+{% extends "base.html" %}
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% block title %}GitCommitted Homepage{% endblock %}
 
-  </head>
-  <body>
+{% block CSS %}
+    <style>
+		#logo {
+			font-size: 48px;
+		}
+
+	</style>
+{% endblock %}
+
+{% block content %}
+
   	<div class="container-fluid" id="header">
-    	<h3>Are you read to <h1>GitCommited</h1>?</h3>
+    	<p>Are you ready to <span id="logo">GitCommited</span>?</p>
   	</div>
   	<div class="container-fluid" id="description">
     	<p><strong>GitCommited</strong> provides a simple way to get you to <i>finally</i> stick with your coding goals by charging you real moulah everytime you fail to meet your commitment. Whether you've been wanting to code more frequently or consistently, made a new year's resolution to work on that side project, or practice a new technology, there's no better motivation that losing money.</p>
   	</div>
-  	<div class="container-fluid" id="form">
-    	<h3>Get started by making a Git Commitment</h3>
-    	<form action="{% url 'app:' %}" method="post">
-    		I want to make: </br>
-    		<input> Git Commits per</br>
-    		<input> time period.</br>
-    		<submit>
 
-  	</div>
+{% endblock %}
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
-
-<!-- <form action="{% url 'polls:vote' question.id %}" method="post">
-{% csrf_token %}
-{% for choice in question.choice_set.all %}
-    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
-{% endfor %}
-<input type="submit" value="Vote" />
-</form> -->
