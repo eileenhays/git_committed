@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block CSS %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid" id="form">
+        <h3>Get started by making a Git Commitment</h3>
+        <form action="{% url 'app:commitment' user.id %}" name="commitment">
+            I want to make: </br>
+            <input type="number" name="count_frequency" value="5"> Git Commits per</br>
+            <select name="period"> 
+                <option value="day" selected>day</option>
+                <option value="month">month</option>
+                <option value="year">year</option>
+            </select>   
+            time period.</br>
+            <submit value="Submit">
+    </div>
+
+{% endblock %}
+
