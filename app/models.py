@@ -1,15 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
-class UserProfile(models.Model):
-	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	github_un = models.CharField(max_length=100)
-
-	def __str__(self):
-		return self.github_un
-
-
 class Commitment(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	period = models.CharField(max_length=10)
@@ -24,7 +15,7 @@ class Commitment(models.Model):
 
 
 # class GitSummary(models.Model):
-# 	user = models.ForeignKey(User, on_delete=models.CASCADE)	
+# 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 # 	commitment = models.ForeignKey(Commitment, on_delete=models.CASCADE)
 # 	start_datetime = models.DateTimeField('period start time')
 # 	end_datetime = models.DateTimeField('period end time')

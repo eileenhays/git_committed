@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import UserProfile, Commitment
+from .models import Commitment
 
 def index(request):
 	context = {
 		'response': 'I want to show that I can pass values from controller to view.'
 		}
-	
+
 	return render(request, 'app/index.html', context)
 
 
