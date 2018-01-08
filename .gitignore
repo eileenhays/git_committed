@@ -1,4 +1,6 @@
 env/
+.DS_Store
+secrets.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -12,5 +14,5 @@ __pycache__/
 local_settings.py
 db.sqlite3
 
-.DS_Store
+
 

@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'qa=a3$v$b$(08(nen8h&ug)29cm6)x#s-xw(3^+%tj9oompn^_'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY') # create a new secret key in production
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -100,6 +100,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Added to specify redirect after login
+LOGIN_REDIRECT_URL = 'home' # defaults to "/accounts/profile/"
 
 
 # Internationalization
